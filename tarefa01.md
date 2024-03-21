@@ -22,6 +22,8 @@
   6. Código sob demanda: Não é obrigatório, porém pode ocorrer a disponibilização de códico para ser executado no lado do cliente.
 
 ## Funiconamento das API REST
+
+  ### Solicitações
   As APIs de REST se comunicam via solicitações de HTTP para executar funções padrão do banco de dados como criar, ler, atualizar e excluir registros (também conhecidos como CRUD) em um recurso. As solicitações mais comuns são: 
   
   * GET para recuperar um registro 
@@ -31,5 +33,18 @@
   
   Todos os métodos HTTP podem ser usados em chamadas da API. Uma API de REST bem projetada é semelhante a um website em execução em um navegador da web com funcionalidade HTTP integrada.
 
+  ### Respostas 
+  Ao receber uma solicitação do cliente, o servidor retorna um código de status HTTP padronizado para indicar o resultado da ação. As categorias de códigos são:
+
+  * 2xx - Status de sucesso
+  * 3xx - Categoria de redirecionamento
+  * 4xx - Erro no Cliente
+  * 5xx - Erro no server
+  
+  Cada código possui um significado específico para o cenário, e é papel do servidor retornar o status correto
+  
+  ### Boas Práticas
+  A construção de API's Rest, geralmente se baseia em boas práticas, as quais podem ser vistas, por exemplo: no uso dos verbos HTTP citados anteriormente; na nomeação dos endpoints sem mesclar singular e plural, usando preferencialmente kebab-case e letra minúscula; e o foco principal em sempre retornar uma resposta para o cliente.
+  
 ## Conclusão
-  Dessa forma, uma Rest API atua de forma a possibilitar o acesso a certas funcionalidades de uma aplicação para outras, seguindo alguns padrões de modo a facilitar a troca de informações, bem como tornar o contato do cliente para com o servidor mais simples e compreensível. O que se dá, além da abstração de informações, pela padronização, a qual ocorre por meio de boas práticas. A título de exemplo, pode-se citar o uso dos verbos HTTP citados anteriormente, a composição dos endpoints usando signgular ou plural, e o foco principal em sempre retornar uma resposta para o cliente.
+  Dessa forma, uma Rest API atua de forma a possibilitar o acesso a certas funcionalidades de uma aplicação para outras, seguindo alguns padrões de modo a facilitar a troca de informações, bem como tornar o contato do cliente para com o servidor mais simples e compreensível. O que se dá, além da abstração de informações, pela padronização, a qual ocorre por meio das boas práticas citadas acima.
