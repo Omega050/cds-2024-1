@@ -21,7 +21,7 @@
      
   6. Código sob demanda: Não é obrigatório, porém pode ocorrer a disponibilização de códico para ser executado no lado do cliente.
 
-## Funiconamento das API REST
+## Funiconamento das APIs REST
 
   ### Solicitações
   As APIs de REST se comunicam via solicitações de HTTP para executar funções padrão do banco de dados como criar, ler, atualizar e excluir registros (também conhecidos como CRUD) em um recurso. As solicitações mais comuns são: 
