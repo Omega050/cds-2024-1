@@ -6,8 +6,9 @@ public class Endereco {
     public String CEP;
     public Bairro bairro;
     public Logradouro logradouro;
-
-    public Endereco(int numero, String Complemento, String CEP, Bairro bairro, Logradouro logradouro) {
+    public TipoEndereco tipoEndereco;
+    
+    public Endereco(int numero, String Complemento, String CEP, Bairro bairro, Logradouro logradouro, TipoEndereco tipoEndereco) {
         this.numero = numero;
         this.Complemento = Complemento;
         this.CEP = CEP;
