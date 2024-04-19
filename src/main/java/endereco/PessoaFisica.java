@@ -1,17 +1,19 @@
 package endereco;
 
-import java.util.Date;
+import java.util.*;
 
 public class PessoaFisica {
     private String nome;
     private String sexo;
     private Date dataNascimento;
-    private Endereco endereco;
+    private List<Endereco> enderecos;
 
-    public PessoaFisica(String nome, String sexo, Date dataNascimento) {
+    public PessoaFisica(String nome, String sexo, Date dataNascimento, Endereco end) {
         this.nome = nome;
         this.sexo = sexo;
         this.dataNascimento = dataNascimento;
+        this.enderecos = new ArrayList<Endereco>();
+        this.enderecos.add(end);
     }
 
     public String getNome() {
@@ -38,11 +40,7 @@ public class PessoaFisica {
         this.dataNascimento = dataNascimento;
     }
 
-    public Endereco getEndereco() {
-        return endereco;
-    }
-    
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
+    public Endereco getEndereco1() {
+        return enderecos.get(0);
     }
 }
