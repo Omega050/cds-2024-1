@@ -4,11 +4,10 @@ public class SistemaLogin {
     private static final String correctU = "usuario";
     private static final String correctP = "senha";
 
-    public void fazerLogin(String user, String senha) throws LoginInvalido{
-        if(!validarLogin(user, senha)){
+    public void fazerLogin(String user, String senha) throws LoginInvalido {
+        if (!validarLogin(user, senha)) {
             throw new LoginInvalido();
-        }
-        else{
+        } else {
             System.out.println("Login Realizado com sucesso");
         }
     }
