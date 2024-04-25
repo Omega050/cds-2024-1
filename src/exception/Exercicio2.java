@@ -1,4 +1,4 @@
-package com.github.omega050.exception;
+package exception;
 
 import java.util.*;
 
