@@ -1,5 +1,3 @@
-package exception.ex3;
-
 public class SistemaLogin {
     private static final String correctU = "usuario";
     private static final String correctP = "senha";

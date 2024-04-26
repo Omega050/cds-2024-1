@@ -1,0 +1,11 @@
+public class ContaBancária {
+        private int saldo;
+
+        public void depositar(int valor){
+           saldo+=valor;
+        }
+
+        private void sacar(int valor) throws SaldoInsuficienteException{
+            if
+        }
+    }
