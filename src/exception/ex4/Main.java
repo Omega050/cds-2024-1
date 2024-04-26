@@ -1,4 +1,3 @@
-import java.lang.constant.Constable;
 import java.util.Scanner;
 
 public class Main {
@@ -16,24 +15,34 @@ public class Main {
             System.out.println("1. Realizar Depósito");
             System.out.println("2. Realizar Saque");
             System.out.println("3. Sair");
-
+            System.out.println("\n");
             op = scanner.nextInt();
 
             switch (op) {
                 case 1:
+                    Clear.clear();
+                    System.out.println("Insira o valor que deseja depositar");
                     double val;
                     val=scanner.nextDouble();
                     conta.depositar(val);
                     break;
                 case 2:
+                    Clear.clear();
+                    System.out.println("Insira o valor que deseja sacar");
                     double vals;
                     vals=scanner.nextDouble();
                     try{
-                    conta.sacar(vals);
+                        conta.sacar(vals);
+                    } catch(SaldoInsuficienteException e){
+                        System.out.println("Erro: "+ e.getMessage());
+                        System.out.println("Deseja tentar sacar um valor diferente? (s/n)");
+                        String resposta = scanner.next();
+                        if(resposta.equalsIgnoreCase("s")){
+                            continue; // Tenta o saque novamente
+                        } else {
+                            System.out.println("Operação de saque cancelada.");
+                        }
                     }
-                    catch(SaldoInsuficienteException e){
-                    System.out.println("Erro: "+ e.getMessage());
-                    }   
                     break;
                 case 3:
                     System.out.println("Encerando!");
