@@ -13,7 +13,7 @@ public class Main {
 
         try {
             sistemaLogin.fazerLogin(login, senha);
-        } catch (LoginInvalido e) {
+        } catch (LoginInvalidoException e) {
             System.out.println("Erro: " + e.getMessage());
         } finally {
             scanner.close();

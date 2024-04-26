@@ -2,9 +2,9 @@ public class SistemaLogin {
     private static final String correctU = "usuario";
     private static final String correctP = "senha";
 
-    public void fazerLogin(String user, String senha) throws LoginInvalido {
+    public void fazerLogin(String user, String senha) throws LoginInvalidoException {
         if (!validarLogin(user, senha)) {
-            throw new LoginInvalido();
+            throw new LoginInvalidoException();
         } else {
             System.out.println("Login Realizado com sucesso");
         }
